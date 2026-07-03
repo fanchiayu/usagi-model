@@ -42,7 +42,8 @@
       <sensor name="d435i_color" type="camera">
         <pose>0 0.0175 0 0 0 0</pose>
         <camera name="color">
-          <horizontal_fov>1.211</horizontal_fov>
+          <!-- aligned to REAL D435i COLOR 640x480 fx=615.5 (bag 260629 camera_info); was 1.211 -->
+          <horizontal_fov>0.9589</horizontal_fov>
           <image>
             <width>640</width>
             <height>480</height>
