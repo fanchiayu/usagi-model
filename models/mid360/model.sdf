@@ -95,8 +95,11 @@
       </sensor>
 
       <!-- IMU (Mid-360 内建 IMU) -->
+      <!-- 位置=真機 Mid-360 規格:IMU 在點雲座標系 (11.0, 23.29, -44.12) mm,
+           即 lidar(z=0.05)+該偏移;= FAST-LIO mid360.yaml extrinsic_T 取負。
+           A112:sim 與真機吃同一份 mid360.yaml,外參必須是同一個物理事實。 -->
       <sensor name="mid360_imu" type="imu">
-        <pose>0 0 0.03 0 0 0</pose>
+        <pose>0.011 0.02329 0.00588 0 0 0</pose>
         <topic>livox/imu</topic>
         <update_rate>200</update_rate>
         <always_on>true</always_on>
